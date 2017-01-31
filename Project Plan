@@ -1,10 +1,19 @@
 Project Plan (Starting Week 3)
 
 Week 3:
-  Complete webpage design/outline
-  Finish database outline
+	Complete webpage design/outline
+	Finish database outline
   
 Week 4:
-
+	Create Webpages as JSPs
 Week 5:
-  Implement 
+	Implement the database into the webpage, allowing for dynamic information
+	Start AWS system
+Week 6:
+	Implement user system for basic login
+	Implement user messaging system
+Week 6: 
+	Implement user comment system
+	Finish AWS system
+	Implement Google recaptcha for login/comments to prevent bots
+
