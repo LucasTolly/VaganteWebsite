@@ -1,0 +1,51 @@
+Class
+	ClassId (Primary)
+	ClassName (VarChar(50))
+
+ClassStartingStats
+	ClassStartingStatsId (Primary)
+	ClassId (Foreign)
+	HP (Integer)
+	Strength (Integer)
+	Dexterity (Integer)
+	Vitality (Integer)
+	Intelligence (Integer)
+	Luck (Integer)
+
+Affinity
+	ClassAffinityId (Primary)
+	ClassId (Foreign)
+
+AffinityLevel
+	ClassAffinityLevelId (Primary)
+	ClassAffinityId (Foreign)
+	Level (Integer)
+	Description (VarChar(255))
+
+Background (Linking between Class and Secret)
+	BackgroundId (Primary)
+	ClassId (Foreign)
+	Description (VarChar(255))
+	UnlockedBySecret (Boolean)
+	SecretId (Foreign)
+	
+Secret
+	SecretId (Primary)
+	UnlockMethod (VarChar(255))
+	Description (VarChar(255))
+
+Area
+	AreaId (Primary)
+	Description (VarChar(255))
+
+Monster
+	MonsterId (Primary)
+	Description (VarChar(255))
+	HP (Integer)
+
+MonsterArea (Linking between Area and Monster)
+	MonsterAreaId (Primary)
+	AreaId (Foreign)
+	MonsterId (Foreign)
+	
+Weapon
