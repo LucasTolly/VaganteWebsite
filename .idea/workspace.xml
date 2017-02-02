@@ -15,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Affinity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Affinity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vagante Scholars/src/Affinity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+            <state relative-caret-position="27">
+              <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
               <folding>
                 <element signature="e#348#349#0" expanded="true" />
                 <element signature="e#381#382#0" expanded="true" />
@@ -27,6 +27,31 @@
                 <element signature="e#524#525#0" expanded="true" />
                 <element signature="e#638#639#0" expanded="true" />
                 <element signature="e#673#674#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CharacterClass.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vagante Scholars/src/CharacterClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+              <folding>
+                <element signature="e#566#567#0" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
+                <element signature="e#723#724#0" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#951#952#0" expanded="true" />
+                <element signature="e#1111#1112#0" expanded="true" />
+                <element signature="e#1151#1152#0" expanded="true" />
+                <element signature="e#1308#1309#0" expanded="true" />
+                <element signature="e#1347#1348#0" expanded="true" />
+                <element signature="e#1516#1517#0" expanded="true" />
+                <element signature="e#1559#1560#0" expanded="true" />
+                <element signature="e#1704#1705#0" expanded="true" />
+                <element signature="e#1739#1740#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,6 +71,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Vagante Scholars/src/Affinity.java" />
+        <option value="$PROJECT_DIR$/Vagante Scholars/src/Class.java" />
+        <option value="$PROJECT_DIR$/Vagante Scholars/src/CharacterClass.java" />
       </list>
     </option>
   </component>
@@ -507,12 +534,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1486062770232</updated>
-      <workItem from="1486062771662" duration="501000" />
+      <workItem from="1486062771662" duration="969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="501000" />
+    <option name="totallyTimeSpent" value="969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="0" width="1522" height="1941" extended-state="0" />
@@ -565,8 +592,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Vagante Scholars/src/Affinity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        <state relative-caret-position="27">
+          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding>
             <element signature="e#348#349#0" expanded="true" />
             <element signature="e#381#382#0" expanded="true" />
@@ -574,6 +601,29 @@
             <element signature="e#524#525#0" expanded="true" />
             <element signature="e#638#639#0" expanded="true" />
             <element signature="e#673#674#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vagante Scholars/src/CharacterClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding>
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
+            <element signature="e#1151#1152#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+            <element signature="e#1516#1517#0" expanded="true" />
+            <element signature="e#1559#1560#0" expanded="true" />
+            <element signature="e#1704#1705#0" expanded="true" />
+            <element signature="e#1739#1740#0" expanded="true" />
           </folding>
         </state>
       </provider>
