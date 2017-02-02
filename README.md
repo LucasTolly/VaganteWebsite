@@ -5,13 +5,19 @@ The goal of this website will to create a space where players of the video game 
 The informational part of the website will feature a dynamically linked database, allowing for cascading changes throughout the website from a single change.
 
 Curent Additional Plugins:
+
   Bootstrap
+  
   jQuery
+  
   jQuery Datatables
 
 Current planned technologies:
 
   Google reCaptcha
+  
   Google 2-step authentication
+  
   Maybe something with Twitch.tv api to bring in direct live streams of the game
+  
   Probably more?
