@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bfbcaf06-44cb-4fcd-bfad-156ac84adfab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vagante Scholars/src/Affinity.java" afterPath="$PROJECT_DIR$/Vagante Scholars/src/Affinity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vagante Scholars/src/CharacterClass.java" afterPath="$PROJECT_DIR$/Vagante Scholars/src/CharacterClass.java" />
-    </list>
+    <list default="true" id="bfbcaf06-44cb-4fcd-bfad-156ac84adfab" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +15,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AffinityLevel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AffinityLevel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vagante Scholars/src/AffinityLevel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
@@ -32,6 +29,21 @@
                 <element signature="e#877#878#0" expanded="true" />
                 <element signature="e#1037#1038#0" expanded="true" />
                 <element signature="e#1071#1072#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Area.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vagante Scholars/src/Area.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+              <folding>
+                <element signature="e#323#324#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#494#495#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,6 +86,7 @@
         <option value="$PROJECT_DIR$/Vagante Scholars/src/CharacterClass.java" />
         <option value="$PROJECT_DIR$/Vagante Scholars/src/Affinity.java" />
         <option value="$PROJECT_DIR$/Vagante Scholars/src/AffinityLevel.java" />
+        <option value="$PROJECT_DIR$/Vagante Scholars/src/Area.java" />
       </list>
     </option>
   </component>
@@ -535,12 +548,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1486062770232</updated>
-      <workItem from="1486062771662" duration="1294000" />
+      <workItem from="1486062771662" duration="1461000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1294000" />
+    <option name="totallyTimeSpent" value="1461000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="0" width="1522" height="1941" extended-state="0" />
@@ -620,6 +633,19 @@
             <element signature="e#877#878#0" expanded="true" />
             <element signature="e#1037#1038#0" expanded="true" />
             <element signature="e#1071#1072#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vagante Scholars/src/Area.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding>
+            <element signature="e#323#324#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
           </folding>
         </state>
       </provider>
