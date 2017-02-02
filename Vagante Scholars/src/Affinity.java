@@ -9,6 +9,9 @@ public class Affinity {
     private int classId;
     private int affinityName;
 
+    /**
+     * Empty constructor currently
+     */
     public Affinity {
 
     }

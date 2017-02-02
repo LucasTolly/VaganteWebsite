@@ -14,8 +14,11 @@ public class CharacterClass {
     private int startingIntelligence;
     private int startingLuck;
 
+    /**
+     * Empty constructor currently
+     */
     public CharacterClass() {
-        
+
     }
 
     /**
