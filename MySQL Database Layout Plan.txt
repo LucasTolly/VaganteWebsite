@@ -1,6 +1,6 @@
 Class
 	ClassId (Primary)
-	ClassName (VarChar(50))
+	ClassName (VarChar(255))
 	StartingStrength
 	StartingDexterity
 	StartingVitality
@@ -10,9 +10,10 @@ Class
 Affinity
 	ClassAffinityId (Primary)
 	ClassId (Foreign)
+	AffinityName (VarChar(255))
 
 AffinityLevel
-	ClassAffinityLevelId (Primary)
+	AffinityLevelId (Primary)
 	ClassAffinityId (Foreign)
 	Level (Integer)
 	Description (VarChar(255))
