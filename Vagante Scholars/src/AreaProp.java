@@ -3,9 +3,9 @@
  */
 public class AreaProp {
 
-    private int AreaPropId;
-    private int AreaId;
-    private int PropId;
+    private int areaPropId;
+    private int areaId;
+    private int propId;
 
     /**
      * Empty constructor currently
