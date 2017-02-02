@@ -13,5 +13,6 @@ Current planned technologies:
 
   Google reCaptcha
   Google 2-step authentication
+  
   Maybe something with Twitch.tv api to bring in direct live streams of the game
   Probably more?
