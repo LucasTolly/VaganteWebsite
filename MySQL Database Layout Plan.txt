@@ -1,16 +1,11 @@
 Class
 	ClassId (Primary)
 	ClassName (VarChar(50))
-
-ClassStartingStats
-	ClassStartingStatsId (Primary)
-	ClassId (Foreign)
-	HP (Integer)
-	Strength (Integer)
-	Dexterity (Integer)
-	Vitality (Integer)
-	Intelligence (Integer)
-	Luck (Integer)
+	StartingStrength
+	StartingDexterity
+	StartingVitality
+	StartingIntelligence
+	StartingLuck
 
 Affinity
 	ClassAffinityId (Primary)
@@ -31,6 +26,7 @@ Background (Linking between Class and Secret)
 	
 Secret
 	SecretId (Primary)
+	Title (VarChar(255))
 	UnlockMethod (VarChar(255))
 	Description (VarChar(255))
 
@@ -48,4 +44,25 @@ MonsterArea (Linking between Area and Monster)
 	AreaId (Foreign)
 	MonsterId (Foreign)
 	
-Weapon
+Prop
+	PropId (Primary)
+	Type (Shrine, Door, )
+	Description (VarChar(255))
+	
+AreaProp
+	AreaPropId (Primary)
+	AreaId (Foreign)
+	PropId (Foreign)
+	
+Item
+	ItemId (Primary)
+	Title (VarChar(255))
+	Type (Weapon, Armor, Spellbook, Consumable)
+	Description (VarChar(255))
+	
+ItemProp
+	ItemProp (Primary)
+	ItemId (Foreign)
+	Prop (Foreign)
+	
+	
