@@ -1,4 +1,6 @@
 /**
+ * Lucas Tolly
+ * 2/2/2017
  * This class is the model for the Background table.
  */
 public class Background {
