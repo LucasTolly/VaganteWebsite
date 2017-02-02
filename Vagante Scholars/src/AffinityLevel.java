@@ -8,7 +8,7 @@ public class AffinityLevel {
     private int affinityLevelId;
     private int classAffinityId;
     private int level;
-    private int description;
+    private String description;
 
     /**
      * Empty constructor currently

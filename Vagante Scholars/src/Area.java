@@ -4,7 +4,7 @@
 public class Area {
 
     private int areaId;
-    private int description;
+    private String description;
 
     /**
      * Empty constructor currently
