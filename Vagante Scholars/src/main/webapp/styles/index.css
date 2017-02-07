@@ -1,0 +1,22 @@
+/*
+	Element Rules
+*/
+h1, h2, h3 {
+	text-align: center;
+}
+
+/*
+	Class Rules
+*/
+.portrait {
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.header {
+	margin-top: 30px;
+}
+
+/*
+	Individual Rules
+*/
