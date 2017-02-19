@@ -17,11 +17,8 @@ public class Background {
     @Id
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment",strategy="increment")
-    @Column(name = "BackGroundId")
+    @Column(name = "BackgroundId")
     private int backgroundID;
-
-    @Column(name = "ClassId")
-    private int classId;
 
     @Column(name = "SecretId")
     private int secretId;
@@ -42,14 +39,12 @@ public class Background {
     /**
      * This constructor takes 5 parameters, setting them to the instance variables
      * @param backgroundID
-     * @param classId
      * @param secretId
      * @param description
      * @param unlockedBySecret
      */
-    public Background(int backgroundID, int classId, int secretId, String description, boolean unlockedBySecret) {
+    public Background(int backgroundID, int secretId, String description, boolean unlockedBySecret) {
         this.backgroundID = backgroundID;
-        this.classId = classId;
         this.secretId = secretId;
         this.description = description;
         this.unlockedBySecret = unlockedBySecret;
@@ -69,22 +64,6 @@ public class Background {
      */
     public void setBackgroundID(int backgroundID) {
         this.backgroundID = backgroundID;
-    }
-
-    /**
-     * Gets the background's class's id
-     * @return
-     */
-    public int getClassId() {
-        return classId;
-    }
-
-    /**
-     * Sets the background's class's id
-     * @param classId
-     */
-    public void setClassId(int classId) {
-        this.classId = classId;
     }
 
     /**
