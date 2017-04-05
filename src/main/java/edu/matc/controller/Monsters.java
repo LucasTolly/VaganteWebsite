@@ -39,7 +39,7 @@ public class Monsters extends HttpServlet {
 
         req.setAttribute("monsters", allMonsterDisplays);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/monsters.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("monsters.jsp");
         dispatcher.forward(req, resp);
     }
 }

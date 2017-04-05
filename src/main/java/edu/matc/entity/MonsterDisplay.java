@@ -1,7 +1,7 @@
 package edu.matc.entity;
 
 /**
- * This class' purpose is to have a displayable version of the Monster class
+ * This class' purpose is to have a displayable version of the MonsterServlet class
  *
  * @author Lucas Tolly
  * Created: 2/6/2017

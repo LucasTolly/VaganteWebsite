@@ -1,0 +1,85 @@
+/* Element Selectors */
+body {
+	background-image: url("../images/forest_bg.png");
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	color: #BEBEC2;
+}
+
+thead tr #descriptionColumn {
+	width: 80%;
+}
+
+/* Class Selectors */
+.container {
+	background-color: #222222;
+	opacity: 0.9;
+	border-radius: 10px;
+}
+
+.tableCell {
+	padding-bottom: 10px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.descriptionButton {
+	display: none;
+}
+
+.centeredTextAlign {
+	text-align: center;
+}
+
+.imageContainer {
+	width: 50%;
+	display: block;
+	margin: auto;
+	border-radius: 10px;
+	background-color: #444444;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.monsterDescription {
+	border-radius: 10px;
+	background-color: #444444;
+	width: 100%;
+	padding: 15px;
+	display: block;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+.container {
+	margin-top: 65px;
+	margin-bottom: 20px;
+}
+
+/* ID Selectors */
+#datatable_filter {
+	padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+	.container {
+		width: 90%;
+	}
+
+	.btn {
+		width: 100%;
+	}
+
+	#descriptionColumn, .descriptionCell {
+		display: none;
+	}
+
+	.imageContainer {
+		width: 100%;
+	}
+
+	.descriptionButton {
+		display: inline;
+	}
+}

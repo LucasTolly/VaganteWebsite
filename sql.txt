@@ -1,0 +1,166 @@
+DROP TABLE monster;
+
+CREATE TABLE monster (
+	MonsterId int NOT NULL auto_increment,
+	HP int,
+	Name varchar(255) NOT NULL,
+	Description varchar(255) NOT NULL,
+	PRIMARY KEY(MonsterId),
+	FOREIGN KEY(HP) REFERENCES monster(MonsterId)
+);
+
+CREATE TABLE MonsterArea (
+	MonsterAreaId int NOT NULL auto_increment,
+	MonsterId int NOT NULL,
+	AreaId int NOT NULL,
+	PRIMARY KEY(MonsterAreaId),
+	FOREIGN KEY(MonsterId) REFERENCES monster(MonsterId),
+	FOREIGN KEY(AreaId) REFERENCES area(AreaId)
+);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Slime", "The slime is an amorphous creature that lives in the caves. To consume its prey, it both jumps and charges.", 9);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Goblin King", "The Goblin King is the boss of all goblins. It summons its lackeys to take down unwary adventurers.", 75);
+
+INSERT INTO monster (Name, Description, HP, ParentMonster)
+VALUES ("Goblin", "The goblin is a humanoid monster that lives in the caves. They attack with rusty swords from fallen adventurers.", 16, 2);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Abomination", "The Abomination is a boss that dwells in the catacombs. It summons a ring of spikes to either guard itself or throw at adventurers", 250);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Baby Dragon", "The Baby Dragon is a reptilian boss that breaths fire. It can also slam into the ground, causing damage to those who aren't in the air.", 75);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Bat", "The Bat is a flying monster that rests on the cielings of the caves.", 5);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Behemoth", "The Behemoth is a god-like monster that floats around the sky. It slams its fists into adventurers when its not summoning lightning storms.", 1000);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Boss Mage", "The Boss Mage is a forgotten king, laid to rest in the crypts. It uses ice magic to freeze adventurers who steal its magic artifact.", 150);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Brood Demon", "The Brood Demon is a demon who lurks in the skies. It summons its spawn, throws bombs, and flies into adventurers.", 750);
+
+INSERT INTO monster (Name, Description, HP, ParentMonster)
+VALUES ("Brood Spawn", "Brood spawn are a monster created by the Brood Demon. They leave a fiery trail behind them.", 25, 9);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Demon Mage", "Demon mages are undead mages who haunt the crypts. It can both freeze and slow adventurers, and also summon monsters.", 25);
+
+INSERT INTO monster (Name, Description, HP, ParentMonster)
+VALUES ("Demon Dog", "Demon dogs are familiars of Demon Mages, summoned by them while in combat. They can charge at lightning speeds.", 25, 11);
+
+INSERT INTO monster (Name, Description, HP, ParentMonster)
+VALUES ("Demon Knight", "Demon knights are familiars of Demon Mages, summoned by them while in combat. They have a solid defense, only becoming vulnerable while they attack.", 75, 11);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Elemental Mage", "Elemental Mages are rogue magicians, practicing their magic in the skies. They have control over fire, ice, and lightning magic.", 75);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Fire Tortoise", "Fire tortoises are reptilian monster that lurk in the temple. They can spine to release fire around them.", 75);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Fish Man", "Fish men are humanoid fish monsters that hunt in the tower. They can shoot water projectiles to damage their prey.", 100);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Fleaman", "Fleamen are monsters that hop around the sky islands. They spin into adventurers with their spears.", 50);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Friendly Thief", "Friendly thieves can be anywhere. They offer money for goods offered by the level's shopkeeper. Beware, however, as they pack a punch.", 100);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Ghost", "Ghosts are lost spirits that roam the catacombs, looking to drag others into their ranks. They fly through walls, charging and adventurers.", 50);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Golem Boss", "The Golem boss is a petrified mushroom enchanted with living magic. It throws boulders, causes shockwaves, and rolls into unprepared adventurers, crushing them.", 250);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Golem", "Golems are boulders enchanted with living magic. They slowly roam the forests, looking for their creators.", 100);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Hand", "Hands are undead creatures, crawling along both the walls and cielings of the catacombs. They throw themselves at adventurers, gripping them tight to squeeze the life out of them.", 50);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Harpy", "Harpies are feathered monster that fly above the forest. They shoot their arrows at adventurers who come into sight.", 15);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Hostile Thief", "Hostile thieves are rogues who knock adventurers down, stealing their gold. They are found everywhere.", 25);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Imp", "Imps are flying, bug-like creatures that inhabit the tower. They charge at climbing adventurers.", 30);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Juggernaut", "Juggernauts are mechnical automatons, enchanted with living magic. It seems their only purpose is to crush adventurers.", 150);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Lurker", "Lurkers are monster who hide in the floors of caves. They attack anything them steps on them, becoming temporarily vulnerable.", 3);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Maneating Plant", "Maneating plants are vegetation of the forests who've developed a taste for blood. They poison adventurers who get caught within their mouths.", 15);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Mimic", "Mimics are imitating monsters that can be found anywhere. They've evolved to look like chests, tricking greedy adventurers.", 10);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Minnow", "Minnows are harmless fish that float in the waters of the caves and forests.", 1);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Necromancer", "The Necromancer is a mage of the catacombs who practices forbidden magic. It summons bones with living magic to due its bidding.", 150);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Piranha", "The piranha is a fish that inhabits the waters of the caves and forests. It attacks adventurers, looking for food.", 5);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Plant Boss", "The Plant Boss is a mutated maneating plant. It's gained the ability to grow three heads that dig through walls.", 250);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Shadow Knight", "The Shadow Knight is a warrior whose abandoned its virtues. It wanders around the skies, looking for a challenger.", 500);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Shopkeeper", "Shopkeepers can be found tending to their shops. They'll get angry if they find they're stock has been stolen.", 50);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Spider Bomber", "Spider Bombers are incendiary arachnids who dive bomb onto adventurers, exploding into fireballs. How they haven't gone extinct is a mystery...", 1);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Spider", "Spiders lurk the forests, looking for adventurers to ensnare. They can both envenom with their bite and trap prey in their webs.", 15);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Spriggan", "Spriggans are humanoid plant monsters who inhabit the forests. They shoot adventurers with arrows to defend their home.", 15);
+
+INSERT INTO monster (Name, Description, HP, ParentMonster)
+VALUES ("Summoned Bones", "Summoned bones are undead monsters called forth by the Necromancer. They explode into a flurry of bones on death.", 15, 31);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Swooper", "Swoopers are flying monsters found in the skies. They drop boulders onto their prey to crush them.", 50);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Tiki Man", "Tiki men are humanoid monsters that inhabit the temple. They shoot adventurers with their venomous darts.", 50);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Tower Piranha", "Tower piranhas are bulkier cousins of their relatives. They live in the tower alongside the Tower Serpent.", 25);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Tower Serpent", "The Tower Serpent guards the artifact the lies in the tower.", 250);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Wisp Boss", "The Wisp Boss is an amalgamation of spirits that inhabit the forest. It summons other wisps to throw at adventurers.", 250);
+
+INSERT INTO monster (Name, Description, HP, ParentMonster)
+VALUES ("Wisp", "Wisps are wayward spirits, lost in the forest. They charge at adventurers in spiral patterns.", 5, 44);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Worm Boss", "The Worm Boss is an ancient worm the burrows throw the caves. It spits acid at enemies.", 50);
+
+INSERT INTO monster (Name, Description, HP, ParentMonster)
+VALUES ("Worm", "Worms are monster that crawl along the walls and cielings of the caves. They are venomous.", 15, 46);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Zombie Dragon", "The Zombie Dragon is a rotting dragon who lies  within the catacombs. It demonstrates more powerful fire attacks that its younger form cannot.", 500);
+
+INSERT INTO monster (Name, Description, HP)
+VALUES ("Zombie", "Zombies are undead humanoid monster that shamble within the catacombs. They can dig through the ground to attack unexpecting adventurers.", 75);

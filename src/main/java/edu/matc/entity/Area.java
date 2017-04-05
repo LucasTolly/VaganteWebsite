@@ -23,6 +23,9 @@ public class Area {
     @Column(name = "Description")
     private String description;
 
+    @Column(name = "Name")
+    private String name;
+
     /**
      * Empty constructor
      */
@@ -72,4 +75,16 @@ public class Area {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    /**
+     * Gets the area's name
+     * @return the area's name
+     */
+    public String getName() { return name; }
+
+    /**
+     * Sets the area's name
+     * @param name the area's name
+     */
+    public void setName(String name) {this.name = name; }
 }
