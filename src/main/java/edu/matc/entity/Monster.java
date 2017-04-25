@@ -11,7 +11,7 @@ import javax.persistence.*;
  * Created: 2/6/2017
  */
 @Entity
-@Table(name = "monster")
+@Table(name = "Monster")
 public class Monster {
 
     @Id
@@ -29,6 +29,9 @@ public class Monster {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "ParentMonster")
+    private Monster parentMonster;
+
     /**
      * Empty constructor
      */
@@ -44,11 +47,12 @@ public class Monster {
      * @param description
      * @param name
      */
-    public Monster(int monsterId, int hp, String description, String name) {
+    public Monster(int monsterId, int hp, String description, String name, Monster parentMonster) {
         this.monsterId = monsterId;
         this.hp = hp;
         this.description = description;
         this.name = name;
+        this.parentMonster = parentMonster;
     }
 
     /**

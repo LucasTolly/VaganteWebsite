@@ -14,11 +14,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple servlet to welcome the user.
- * @author pwaite
- */
-
 @WebServlet(
         urlPatterns = {"/monsters"}
 )

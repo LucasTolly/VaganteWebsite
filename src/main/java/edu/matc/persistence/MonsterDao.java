@@ -2,8 +2,10 @@ package edu.matc.persistence;
 
 import edu.matc.entity.Monster;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,7 +66,6 @@ public class MonsterDao {
         transaction.commit();
     }
 
-
     /**
      * Update the monster
      * @param monster
@@ -74,5 +75,16 @@ public class MonsterDao {
         Transaction transaction = session.beginTransaction();
         session.update(monster);
         transaction.commit();
+    }
+
+    /**
+     * Search for a list of children monsters
+     * @param monster
+     */
+    public void searchForChildrenMonster(Monster monster) {
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        List<Monster> monsters =
+                session.createCriteria(Monster.class).add(Restrictions.eq("ParentMonster",
+                        monster.getMonsterId())).list();
     }
 }
