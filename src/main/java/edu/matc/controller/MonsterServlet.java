@@ -31,9 +31,11 @@ public class MonsterServlet extends HttpServlet {
         MonsterDao monsterDao = new MonsterDao();
         int monsterId = Integer.valueOf(req.getParameter("id"));
 
-        edu.matc.entity.Monster monster = monsterDao.getMonster(monsterId);
+        Monster monster = monsterDao.getMonster(monsterId);
 
-        req.setAttribute("monster", monster);
+        MonsterDisplay monsterDisplay = new MonsterDisplay(monster);
+
+        req.setAttribute("monster", monsterDisplay);
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("monster.jsp");
         dispatcher.forward(req, resp);

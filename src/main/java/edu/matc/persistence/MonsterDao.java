@@ -76,15 +76,4 @@ public class MonsterDao {
         session.update(monster);
         transaction.commit();
     }
-
-    /**
-     * Search for a list of children monsters
-     * @param monster
-     */
-    public void searchForChildrenMonster(Monster monster) {
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        List<Monster> monsters =
-                session.createCriteria(Monster.class).add(Restrictions.eq("ParentMonster",
-                        monster.getMonsterId())).list();
-    }
 }

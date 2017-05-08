@@ -23,16 +23,20 @@ public class Monsters extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 
-        MonsterDao monsterDao = new MonsterDao();
+        try {
+            MonsterDao monsterDao = new MonsterDao();
 
-        List<Monster> allMonsters = monsterDao.getAllMonsters();
-        List<MonsterDisplay> allMonsterDisplays = new ArrayList<MonsterDisplay>();
+            List<Monster> allMonsters = monsterDao.getAllMonsters();
+            List<MonsterDisplay> allMonsterDisplays = new ArrayList<MonsterDisplay>();
 
-        for (Monster monster : allMonsters) {
-            allMonsterDisplays.add(new MonsterDisplay(monster));
+            for (Monster monster : allMonsters) {
+                allMonsterDisplays.add(new MonsterDisplay(monster));
+            }
+            req.setAttribute("monsters", allMonsterDisplays);
+
+        } catch (Exception exception) {
+            req.setAttribute("errorLog", "There was an error. Please contact the owner of the site.");
         }
-
-        req.setAttribute("monsters", allMonsterDisplays);
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("monsters.jsp");
         dispatcher.forward(req, resp);

@@ -69,7 +69,7 @@ public class AreaDao {
      * Update the area
      * @param area
      */
-    public void updateaArea(Area area) {
+    public void updateArea(Area area) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.update(area);

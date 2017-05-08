@@ -21,19 +21,9 @@
         <property name="show_sql">true</property>
 
         <!-- List the annotated entity class/es -->
-        <mapping class="edu.matc.entity.Affinity"/>
-        <mapping class="edu.matc.entity.AffinityLevel"/>
         <mapping class="edu.matc.entity.Area"/>
-        <mapping class="edu.matc.entity.AreaProp"/>
-        <mapping class="edu.matc.entity.Background"/>
-        <mapping class="edu.matc.entity.BackgroundClass"/>
-        <mapping class="edu.matc.entity.Class"/>
-        <mapping class="edu.matc.entity.Item"/>
-        <mapping class="edu.matc.entity.ItemProp"/>
         <mapping class="edu.matc.entity.MonsterArea"/>
         <mapping class="edu.matc.entity.Monster"/>
-        <mapping class="edu.matc.entity.Prop"/>
-        <mapping class="edu.matc.entity.Secret"/>
         <mapping class="edu.matc.entity.User"/>
         <mapping class="edu.matc.entity.UserPost"/>
         <mapping class="edu.matc.entity.FollowedUser"/>

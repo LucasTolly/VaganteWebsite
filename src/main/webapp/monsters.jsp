@@ -10,6 +10,9 @@
     <div class="container monstersContainer">
         <h1>Monsters</h1>
         <h4>These are the monster that prowl the dungeons of Vagante. Click on one to discover its nature!</h4>
+        <p>
+            ${errorLog}
+        </p>
         <div class="row">
             <table id="datatable" class="display" cellspacing="0" width="100%">
                 <thead>

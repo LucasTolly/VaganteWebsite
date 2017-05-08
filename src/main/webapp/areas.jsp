@@ -30,7 +30,7 @@
                     <tr>
                         <td>
                             <div class="tableCell">
-                                <a href="/area&id=${area.areaId}" target="_blank">${area.name}</a>
+                                <a href="/area?id=${area.areaId}" target="_blank">${area.name}</a>
                             </div>
                         </td>
                         <td title="${area.description}">

@@ -1,8 +1,9 @@
 package edu.matc.entity;
 
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * A class to represent a monster.
@@ -18,19 +19,19 @@ public class Monster {
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment",strategy="increment")
     @Column(name = "MonsterId")
-    private int monsterId;
+    private Integer monsterId;
 
     @Column(name = "HP")
-    private int hp;
+    private Integer hp;
 
     @Column(name = "Description")
     private String description;
 
-    @Column(name = "name")
+    @Column(name = "Name")
     private String name;
 
     @Column(name = "ParentMonster")
-    private Monster parentMonster;
+    private Integer parentMonsterId;
 
     /**
      * Empty constructor
@@ -41,25 +42,26 @@ public class Monster {
 
     /**
      * This constructor takes three parameters, setting them to the
-     * instance variables
+     * instance variables. It then creates a shortened description.
+     * Finally, it gets the parent monster.
      * @param monsterId
      * @param hp
      * @param description
      * @param name
      */
-    public Monster(int monsterId, int hp, String description, String name, Monster parentMonster) {
+    public Monster(int monsterId, int hp, String description, String name, int parentMonsterId) {
         this.monsterId = monsterId;
         this.hp = hp;
         this.description = description;
         this.name = name;
-        this.parentMonster = parentMonster;
+        this.parentMonsterId = parentMonsterId;
     }
 
     /**
      * Get the monster's id
      * @return
      */
-    public int getMonsterId() {
+    public Integer getMonsterId() {
         return monsterId;
     }
 
@@ -67,7 +69,7 @@ public class Monster {
      * Set the monster's id
      * @param monsterId
      */
-    public void setMonsterId(int monsterId) {
+    public void setMonsterId(Integer monsterId) {
         this.monsterId = monsterId;
     }
 
@@ -75,7 +77,7 @@ public class Monster {
      * Get the monster's hp
      * @return
      */
-    public int getHp() {
+    public Integer getHp() {
         return hp;
     }
 
@@ -83,7 +85,7 @@ public class Monster {
      * Set the monster's hp
      * @param hp
      */
-    public void setHp(int hp) {
+    public void setHp(Integer hp) {
         this.hp = hp;
     }
 
@@ -112,10 +114,26 @@ public class Monster {
     }
 
     /**
-     * Set the monster's description
+     * Set the monster's name
      * @param name
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * Getter for parentMonsterId
+     * @return
+     */
+    public Integer getParentMonsterId() {
+        return parentMonsterId;
+    }
+
+    /**
+     * Setter for parentMonsterId
+     * @param parentMonsterId
+     */
+    public void setParentMonsterId(Integer parentMonsterId) {
+        this.parentMonsterId = parentMonsterId;
     }
 }
