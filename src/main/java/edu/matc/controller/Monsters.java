@@ -3,6 +3,7 @@ package edu.matc.controller;
 import edu.matc.persistence.MonsterDao;
 import edu.matc.entity.Monster;
 import edu.matc.entity.MonsterDisplay;
+import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,9 +20,9 @@ import java.util.List;
 )
 
 public class Monsters extends HttpServlet {
+    private final Logger logger = Logger.getLogger(this.getClass());
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 
         try {
             MonsterDao monsterDao = new MonsterDao();

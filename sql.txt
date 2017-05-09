@@ -1,15 +1,21 @@
-DROP TABLE monster;
-
 CREATE TABLE monster (
 	MonsterId int NOT NULL auto_increment,
 	HP int,
 	Name varchar(255) NOT NULL,
 	Description varchar(255) NOT NULL,
+	ParentMonster int,
 	PRIMARY KEY(MonsterId),
-	FOREIGN KEY(HP) REFERENCES monster(MonsterId)
+	FOREIGN KEY(ParentMonster) REFERENCES monster(MonsterId)
 );
 
-CREATE TABLE MonsterArea (
+CREATE TABLE area (
+    AreaId int NOT NULL auto_increment,
+    Description varchar(255) NOT NULL,
+    Name varchar(255) NOT NULL,
+    PRIMARY KEY(AreaId)
+);
+
+CREATE TABLE monsterarea (
 	MonsterAreaId int NOT NULL auto_increment,
 	MonsterId int NOT NULL,
 	AreaId int NOT NULL,

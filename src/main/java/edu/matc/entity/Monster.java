@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * Created: 2/6/2017
  */
 @Entity
-@Table(name = "Monster")
+@Table(name = "monster")
 public class Monster {
 
     @Id

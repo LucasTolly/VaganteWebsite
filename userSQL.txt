@@ -1,32 +1,18 @@
-CREATE TABLE User (
-UserId INT(6) AUTO_INCREMENT,
-Username VARCHAR(30) NOT NULL,
-Password VARCHAR(255) NOT NULL,
-Email varchar(50) NOT NULL,
-PRIMARY KEY(UserId)
+CREATE TABLE user (
+user_name VARCHAR(15) NOT NULL,
+user_pass VARCHAR(15) NOT NULL,
+PRIMARY KEY(user_name)
+);
+
+CREATE TABLE user_roles (
+user_name VARCHAR(15) NOT NULL,
+role_name VARCHAR(15) NOT NULL,
+PRIMARY KEY(user_name, role_name),
 );
 
 CREATE TABLE UserPost (
 PostId INT(6) AUTO_INCREMENT,
-UserId INT(6) NOT NULL,
+user_name VARCHAR(15) NOT NULL,
 PRIMARY KEY(PostId),
-FOREIGN KEY(UserId) REFERENCES user(userId)
-);
-
-CREATE TABLE LikedPost (
-LikedPostId INT(6) AUTO_INCREMENT,
-UserId INT(6) NOT NULL,
-PostId INT(6) NOT NULL,
-PRIMARY KEY(likedPostId),
-FOREIGN KEY(UserId) REFERENCES user(userId),
-FOREIGN KEY(PostId) REFERENCES userPost(postId)
-);
-
-CREATE TABLE FollowedUser (
-FollowedUserId INT(6) AUTO_INCREMENT,
-FollowedUser INT(6) NOT NULL,
-FollowingUser INT(6) NOT NULL,
-PRIMARY KEY(FollowedUserId),
-FOREIGN KEY(FollowedUser) REFERENCES user(userId),
-FOREIGN KEY(FollowingUser) REFERENCES user(userId)
+FOREIGN KEY(user_name) REFERENCES user(user_name)
 );

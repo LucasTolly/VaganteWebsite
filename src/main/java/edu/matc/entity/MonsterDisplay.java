@@ -56,9 +56,9 @@ public class MonsterDisplay extends Monster {
             connection = database.getConnection();
             Statement selectStatement = connection.createStatement();
 
-            String areaSql = "SELECT Area.Name, Area.AreaId, Area.Description " +
-                    "FROM (MonsterArea INNER JOIN Area ON MonsterArea.AreaId " +
-                    "= Area.AreaId) WHERE MonsterArea.MonsterId = " +
+            String areaSql = "SELECT area.Name, area.AreaId, area.Description " +
+                    "FROM (monsterarea INNER JOIN area ON monsterarea.AreaId " +
+                    "= area.AreaId) WHERE monsterarea.MonsterId = " +
                     String.valueOf(baseMonster.getMonsterId());
             ResultSet areaResults = selectStatement.executeQuery(areaSql);
             while (areaResults.next()) {

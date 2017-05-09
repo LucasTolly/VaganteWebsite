@@ -27,14 +27,14 @@ public class UserDao {
     }
 
     /**
-     * retrieve an user given their userId
+     * retrieve an user given their username
      *
-     * @param userId the user's userId
+     * @param username the user's username
      * @return user
      */
-    public User getUser(int userId) {
+    public User getUser(String username) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        User user = (User) session.get(User.class, userId);
+        User user = (User) session.get(User.class, username);
         return user;
     }
 
@@ -42,24 +42,24 @@ public class UserDao {
      * add an user
      *
      * @param user
-     * @return the userId of the inserted record
+     * @return the username of the inserted record
      */
-    public int addUser(User user) {
+    public String addUser(User user) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        int userId = (int)session.save(user);
+        String username = (String)session.save(user);
         transaction.commit();
-        return userId;
+        return username;
     }
 
     /**
-     * delete an user by userId
-     * @param userId the user's userId
+     * delete an user by username
+     * @param username the user's username
      */
-    public void deleteUser(int userId) {
+    public void deleteUser(String username) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        User user = (User) session.get(User.class, userId);
+        User user = (User) session.get(User.class, username);
         session.delete(user);
         transaction.commit();
     }

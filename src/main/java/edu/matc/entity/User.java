@@ -11,23 +11,15 @@ import javax.persistence.*;
  * Created: 2/6/2017
  */
 @Entity
-@Table(name = "User")
+@Table(name = "user")
 public class User {
 
     @Id
-    @GeneratedValue(generator="increment")
-    @GenericGenerator(name="increment",strategy="increment")
-    @Column(name = "UserId")
-    private int userId;
-
-    @Column(name = "Username")
+    @Column(name = "user_name")
     private String username;
 
-    @Column(name = "Password")
+    @Column(name = "user_pass")
     private String password;
-
-    @Column(name = "Email")
-    private String email;
 
     /**
      * Empty constructor
@@ -37,34 +29,13 @@ public class User {
     }
 
     /**
-     * Constructor that takes in four parameters to immediately set
-     * to the Affinity's instance variables
-     * @param userId
+     * Constructor that takes in two parameters
      * @param username
      * @param password
-     * @param email
      */
-    public User(int userId, String username, String password, String email) {
-        this.userId = userId;
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.email = email;
-    }
-
-    /**
-     * Getter for userId
-     * @return
-     */
-    public int getUserId() {
-        return userId;
-    }
-
-    /**
-     * Setter for userId
-     * @param userId
-     */
-    public void setUserId(int userId) {
-        this.userId = userId;
     }
 
     /**
@@ -97,21 +68,5 @@ public class User {
      */
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    /**
-     * Getter for email
-     * @return
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * Setter for email
-     * @param email
-     */
-    public void setEmail(String email) {
-        this.email = email;
     }
 }
