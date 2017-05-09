@@ -16,10 +16,21 @@ thead tr #descriptionColumn {
 }
 
 /* Class Selectors */
+.buttonLink {
+    color: white;
+    text-decoration: none;
+}
+
+.buttonLink:hover {
+    color: white;
+    text-decoration: none;
+}
+
 .container {
 	background-color: #222222;
 	opacity: 0.9;
 	border-radius: 10px;
+    padding-bottom: 35px;
 }
 
 .tableCell {
@@ -63,6 +74,8 @@ thead tr #descriptionColumn {
 
 .g-recaptcha {
 	margin: auto;
+    display: inline-block;
+    width: 304px;
 }
 
 /* ID Selectors */

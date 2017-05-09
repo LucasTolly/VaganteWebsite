@@ -9,15 +9,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1 id="websiteHeader" class="centeredTextAlign">Admin Page</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6 centeredTextAlign">
-            <a href="monsters"><h1>Beastiary</h1></a>
-        </div>
-        <div class="col-sm-6 centeredTextAlign">
-            <a href="areas"><h1>Road Map</h1></a>
+            <h1 id="websiteHeader" class="centeredTextAlign">Profile</h1>
         </div>
     </div>
     <div class="row">

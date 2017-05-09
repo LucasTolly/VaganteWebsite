@@ -12,6 +12,7 @@
                 <div class="col-sm-12">
                     <h1>${area.name}</h1>
                     <p>${area.description}</p>
+                    <p>The following monsters can be found in this area:</p>
                 </div>
             </div>
 

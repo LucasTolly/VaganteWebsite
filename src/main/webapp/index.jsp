@@ -16,14 +16,20 @@
                 All content on this web site belongs to Nuke Nine, and was built for educational purposes with no
                 monetary incentive.
             </p>
+            <p>
+                Signup <a href="signup">here.</a>
+            </p>
+            <p>Profile page can be found <a href="profile.jsp">here</a> (requires login).</p>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-6 centeredTextAlign">
-            <a href="monsters"><h1>Beastiary</h1></a>
+            <button class="btn btn-primary"><a href="monsters" class="buttonLink"><h1>Beastiary</h1></a></button>
+            <br/>
         </div>
         <div class="col-sm-6 centeredTextAlign">
-            <a href="areas"><h1>Road Map</h1></a>
+            <button class="btn btn-primary"><a href="areas" class="buttonLink"><h1>Road Map</h1></a></button>
+            <br/>
         </div>
     </div>
 </div>
