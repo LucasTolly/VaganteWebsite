@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.URL;
+import org.apache.log4j.Logger;
 
 import javax.json.Json;
 import javax.json.JsonObject;
@@ -79,7 +80,6 @@ public class VerifyRecaptcha {
 
             return jsonObject.getBoolean("success");
         }catch(Exception e){
-            e.printStackTrace();
             return false;
         }
     }

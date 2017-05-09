@@ -55,21 +55,20 @@ public class Login extends HttpServlet {
 
         boolean verify = VerifyRecaptcha.verify(gRecaptchaResponse);
 
-        if (req.getParameter("username") != null && req.getParameter("password") != null) {
-            String username = (String) req.getParameter("username");
-            String password = (String) req.getParameter("password");
-            User newUser = new User(username, password);
-
-            UserRoles userRole = new UserRoles(username, "user");
-
-            UserDao userDao = new UserDao();
-            userDao.addUser(newUser);
-            UserRolesDao userRolesDao = new UserRolesDao();
-            userRolesDao.addUserRoles(userRole);
-        }
-
         if (verify) {
             req.setAttribute("captchaResult", "Success! Account has been created.");
+            if (req.getParameter("username") != null && req.getParameter("password") != null) {
+                String username = (String) req.getParameter("username");
+                String password = (String) req.getParameter("password");
+                User newUser = new User(username, password);
+
+                UserRoles userRole = new UserRoles(username, "user");
+
+                UserDao userDao = new UserDao();
+                userDao.addUser(newUser);
+                UserRolesDao userRolesDao = new UserRolesDao();
+                userRolesDao.addUserRoles(userRole);
+            }
         } else {
             req.setAttribute("captchaResult", "Failure!");
         }
