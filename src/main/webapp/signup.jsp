@@ -37,9 +37,17 @@
         </div>
         <br/>
         <div class="row">
+
+
+
+
             <div class="col-sm-12 centeredTextAlign">
                 <div class="g-recaptcha" data-sitekey="6Le3nB0UAAAAACZUf8BgjV7xL7A0AW1wMxTVOYgu"></div>
             </div>
+
+
+
+
         </div>
         <br/>
         <div class="row">

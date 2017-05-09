@@ -1,12 +1,51 @@
 Timelog
 
 1/16/2017:
-  10AM - 12:30 AM   2.5 Hours
+    2.5 Hours
 
 1/23/2017:
-  6PM - 10PM        4 Hours
+    4 Hours
   
 1/30/2017:
-  8PM - 12PM        4 Hours
+    4 Hours
+
+2/2/2017:
+    4 Hours
+
+2/7/2017:
+    6 Hours; Getting current project up and running on AWS
+
+2/18/2017:
+    3ish hours; First draft of Hibernate classes/daos
+
+2/19/2017:
+    5.5ish hours; More hibernate classes to represent linking tables
+
+3/20/2017:
+    3 hours; cleaning up CSS/code for code reviews
+
+4/4/2017:
+    5 Hours;(Mostly) finalizing the display pages for Monster and Monsters
+
+4/17/2017:
+    4 hours; more work on CSS/javascript (datatables) for Monsters
+
+4/18/2017:
+    1 hour; more work on CSS/javascript
+
+4/25/2017:
+    Cleanup for code review
+
+5/3/2017
+    Working on transfering page design from Monster/Monsters over to Area/Areas
+
+5/5/2017
+    5ish hours;  Finished the display classes for Area/Monster, holding additional information
+
+5/8/2017
+    6 Hours; finalized CSS design of Monster/Area pages
+
+5/9/2017
+    10 Hours; final push, finished implementing Google reCaptcha, finished User system locally, unable to get User system working on AWS
   
   
