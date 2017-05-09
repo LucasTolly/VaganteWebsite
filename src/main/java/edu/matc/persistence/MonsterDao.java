@@ -11,7 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Lucas Tolly on 2/2/16.
+ * This class provides easy access to the Monster table in the
+ * MySQL Database
+ * @author tolly
  */
 public class MonsterDao {
 

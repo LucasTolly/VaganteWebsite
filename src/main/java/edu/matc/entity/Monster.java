@@ -2,8 +2,6 @@ package edu.matc.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
-import java.util.List;
-import java.util.ArrayList;
 
 /**
  * A class to represent a monster.

@@ -14,26 +14,48 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import edu.matc.utils.VerifyRecaptcha;
+
+/**
+ * This servlet will acts as both the login page and as a gatekeeper
+ * for incorrect Google reCaptcha
+ */
 @WebServlet(
         urlPatterns = {"/login"}
 )
-
 public class Login extends HttpServlet {
     private final Logger logger = Logger.getLogger(this.getClass());
 
+    /**
+     * Overriden doGet that simply redirects to login.jsp
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        System.out.println("Entering doGet for Login");
-
         RequestDispatcher dispatcher = req.getRequestDispatcher("login.jsp");
         dispatcher.forward(req, resp);
     }
 
+    /**
+     * Overriden doPost that checks if a Google Recaptcha
+     * was correctly filled out; otherwise it will not
+     * insert the user that was requested to be created.
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String gRecaptchaResponse =
+                req.getParameter("g-recaptcha-response");
 
-        if (req.getParameter("username") != null) {
+        boolean verify = VerifyRecaptcha.verify(gRecaptchaResponse);
+
+        if (req.getParameter("username") != null && req.getParameter("password") != null) {
             String username = (String) req.getParameter("username");
             String password = (String) req.getParameter("password");
             User newUser = new User(username, password);
@@ -44,6 +66,12 @@ public class Login extends HttpServlet {
             userDao.addUser(newUser);
             UserRolesDao userRolesDao = new UserRolesDao();
             userRolesDao.addUserRoles(userRole);
+        }
+
+        if (verify) {
+            req.setAttribute("captchaResult", "Success! Account has been created.");
+        } else {
+            req.setAttribute("captchaResult", "Failure!");
         }
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("login.jsp");

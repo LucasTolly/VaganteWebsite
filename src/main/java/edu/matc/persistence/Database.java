@@ -9,26 +9,39 @@ import org.apache.log4j.Logger;
 
 /**
  * Gets access to the VaganteScholar database
- * Created on 8/31/16.
- *
  * @author Lucas Tolly
  */
 
 public class Database {
 
     private final Logger logger = Logger.getLogger(this.getClass());
-    // create an object of the class Database
     private static Database instance = new Database();
-
     private Properties properties;
-
     private Connection connection;
-
-    // private constructor prevents instantiating this class anywhere else
     private Database() {
         loadProperties();
     }
 
+    /**
+     * Getter for Instance
+     * @return
+     */
+    public static Database getInstance() {
+        return instance;
+    }
+
+    /**
+     * Getter for Connection
+     * @return
+     */
+    public Connection getConnection() {
+        return connection;
+    }
+
+    /**
+     * This method loads the set properties that contains the
+     * MySQL Database's credentials
+     */
     private void loadProperties() {
         properties = new Properties();
         try {
@@ -41,15 +54,10 @@ public class Database {
 
     }
 
-    // get the only Database object available
-    public static Database getInstance() {
-        return instance;
-    }
-
-    public Connection getConnection() {
-        return connection;
-    }
-
+    /**
+     * Creates a connection to the desired database
+     * @throws Exception
+     */
     public void connect() throws Exception {
         if (connection != null)
             return;
@@ -65,6 +73,9 @@ public class Database {
         connection = DriverManager.getConnection(url, properties.getProperty("username"),  properties.getProperty("password"));
     }
 
+    /**
+     * Disconnects from the database
+     */
     public void disconnect() {
         if (connection != null) {
             try {

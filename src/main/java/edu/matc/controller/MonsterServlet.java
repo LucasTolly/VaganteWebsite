@@ -15,19 +15,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A simple servlet to welcome the user.
- * @author pwaite
+ * This servlet gets a Monster via an ID from the URL parameters.
+ * @author tolly
  */
-
 @WebServlet(
         urlPatterns = {"/monster"}
 )
-
 public class MonsterServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
         MonsterDao monsterDao = new MonsterDao();
         int monsterId = Integer.valueOf(req.getParameter("id"));
 

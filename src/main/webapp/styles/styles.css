@@ -61,6 +61,10 @@ thead tr #descriptionColumn {
 	margin-bottom: 20px;
 }
 
+.g-recaptcha {
+	margin: auto;
+}
+
 /* ID Selectors */
 #datatable_filter {
 	padding-right: 20px;

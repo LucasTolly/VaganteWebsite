@@ -12,9 +12,10 @@ import org.junit.Assert;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by Lucas Tolly on 4/18/2017.
+ * This class test all methods in MonsterDao
+ * @author tolly
  */
-public class MonsterClassesTest {
+public class MonsterDaoTest {
 
     public static MonsterDao monsterDao = new MonsterDao();
 

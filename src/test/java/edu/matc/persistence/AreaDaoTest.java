@@ -12,9 +12,10 @@ import org.junit.Assert;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by Lucas Tolly on 4/18/2017.
+ * This class tests all methods in AreaDao
+ * @author tolly
  */
-public class AreaClassesTest {
+public class AreaDaoTest {
 
     public static AreaDao areaDao = new AreaDao();
 

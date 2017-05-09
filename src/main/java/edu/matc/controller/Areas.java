@@ -14,10 +14,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class is a servlet that gets all Areas from the database
+ * @author tolly
+ */
 @WebServlet(
         urlPatterns = {"/areas"}
 )
-
 public class Areas extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

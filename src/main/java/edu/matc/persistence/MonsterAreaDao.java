@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Lucas Tolly on 2/2/16.
+ * This class provides easy access to the MonsterArea table in the
+ * MySQL Database
+ * @author tolly
  */
 public class MonsterAreaDao {
 
@@ -61,18 +63,6 @@ public class MonsterAreaDao {
         Transaction transaction = session.beginTransaction();
         MonsterArea monsterArea = (MonsterArea) session.get(MonsterArea.class, monsterAreaId);
         session.delete(monsterArea);
-        transaction.commit();
-    }
-
-
-    /**
-     * Update the monsterArea
-     * @param monsterArea
-     */
-    public void updateMonsterArea(MonsterArea monsterArea) {
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        session.update(monsterArea);
         transaction.commit();
     }
 }

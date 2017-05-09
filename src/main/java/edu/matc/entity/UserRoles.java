@@ -30,8 +30,8 @@ public class UserRoles {
     }
 
     /**
-     * Constructor that takes in four parameters to immediately set
-     * to the Affinity's instance variables
+     * Constructor that takes in two parameters to set a UserRole's
+     * instance variables.
      * @param username
      * @param roleName
      */

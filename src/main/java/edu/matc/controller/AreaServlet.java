@@ -13,14 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * A simple servlet to welcome the user.
- * @author pwaite
+ * This servlet gets a specific Area via URL parameters
+ * @author tolly
  */
-
 @WebServlet(
         urlPatterns = {"/area"}
 )
-
 public class AreaServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -28,7 +28,7 @@ public class AreaDisplay extends Area {
 
     /**
      * This constructor takes a base monster class and builds off of
-     * it to create a displable monster
+     * it to create a displable area.
      * @param baseArea
      */
     public AreaDisplay(Area baseArea) {

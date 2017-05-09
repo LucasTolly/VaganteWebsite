@@ -25,7 +25,6 @@
         <mapping class="edu.matc.entity.MonsterArea"/>
         <mapping class="edu.matc.entity.Monster"/>
         <mapping class="edu.matc.entity.User"/>
-        <mapping class="edu.matc.entity.UserPost"/>
         <mapping class="edu.matc.entity.UserRoles"/>
 
 

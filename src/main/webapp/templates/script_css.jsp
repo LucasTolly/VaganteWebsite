@@ -16,3 +16,6 @@
 
 <!-- Custom JavaScript -->
 <script type="text/javascript" src="javascript/datatables.js"></script>
+
+<!-- Google recaptcha -->
+<script src='https://www.google.com/recaptcha/api.js'></script>

@@ -13,6 +13,12 @@
         </div>
     </div>
     <br/>
+    <div class="row">
+        <div class="col-sm-12 centeredTextAlign">
+            ${captchaResult}
+        </div>
+    </div>
+    <br/>
     <form action="j_security_check" method="POST">
         <div class="row">
             <div class="col-sm-3"></div>
